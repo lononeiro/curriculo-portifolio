@@ -1,0 +1,145 @@
+/* ======== BASE ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #0d1117;
+    color: #e6edf3;
+    line-height: 1.6;
+}
+
+/* ======== CABEÇALHO ======== */
+.header {
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 20px 0;
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header h1 {
+    color: #58a6ff;
+    font-size: 1.8rem;
+}
+
+.btn {
+    color: #e6edf3;
+    text-decoration: none;
+    font-weight: 500;
+    background: #043474;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background: #0759c4;
+}
+
+/* ======== CONTEÚDO PRINCIPAL (SOBRE MIM) ======== */
+.content-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.profile-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    border-bottom: 1px dashed #30363d;
+    padding-bottom: 40px;
+}
+
+.profile-info {
+    flex: 2; /* Ocupa mais espaço para o texto */
+}
+
+.profile-section h2 {
+    color: #79c0ff;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.profile-section p {
+    margin-bottom: 15px;
+    color: #c9d1d9;
+    text-align: justify;
+}
+
+.contact-info {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #30363d;
+}
+
+.contact-info h3 {
+    color: #58a6ff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}
+
+/* ======== IMAGEM DE PERFIL ======== */
+.profile-img-container {
+    flex: 1; /* Ocupa menos espaço, à direita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.profile-img {
+    width: 40vh; /* Tamanho da imagem */
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #191a1b; /* Borda ao redor da imagem */
+    filter: brightness(0.95);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 700px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-info {
+        order: 2; /* Coloca a info abaixo da imagem no mobile */
+        text-align: left; /* Mantém o texto alinhado à esquerda no mobile */
+    }
+
+    .profile-section h2 {
+        text-align: center;
+    }
+    
+    .profile-section p {
+        text-align: justify; /* Mantém o parágrafo justificado */
+    }
+
+    .profile-img-container {
+        order: 1; /* Coloca a imagem acima da info no mobile */
+        margin-bottom: 20px;
+    }
+    
+    .contact-info {
+        text-align: left; /* Mantém as informações de contato alinhadas à esquerda */
+    }
+}

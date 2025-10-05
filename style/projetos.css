@@ -1,0 +1,121 @@
+/* ======== BASE ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+/* ======== CABEÇALHO ======== */
+.header {
+  background-color: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 20px 0;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header h1 {
+  color: #58a6ff;
+  font-size: 1.8rem;
+}
+
+.btn {
+
+  color: #e6edf3;
+  text-decoration: none;
+  font-weight: 500;
+  background: #043474;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.3s;
+    margin-left: 10px;
+}
+
+.btn:hover {
+  background: #0759c4;
+}
+
+/* ======== PROJETOS ======== */
+.projects {
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* Cada projeto */
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-bottom: 1px dashed #30363d;
+  padding-bottom: 40px;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project h2 {
+  color: #79c0ff;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.desc {
+  margin-bottom: 8px;
+  color: #c9d1d9;
+}
+
+.tech {
+  margin-bottom: 10px;
+  color: #a6b3bf;
+}
+
+.link {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ======== IMAGEM DO PROJETO ======== */
+.project-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: brightness(0.9);
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 700px) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-img img {
+    width: 80px;
+    margin-top: 15px;
+  }
+}
