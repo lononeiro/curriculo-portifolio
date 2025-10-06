@@ -34,7 +34,6 @@ body {
 }
 
 .btn {
-
   color: #e6edf3;
   text-decoration: none;
   font-weight: 500;
@@ -42,7 +41,7 @@ body {
   padding: 8px 16px;
   border-radius: 6px;
   transition: background 0.3s;
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .btn:hover {
@@ -109,6 +108,19 @@ body {
 
 /* ======== RESPONSIVIDADE ======== */
 @media (max-width: 700px) {
+  /* Navbar: título e botões um abaixo do outro */
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaço entre título e botões */
+  }
+
+  .btn {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  /* Projetos empilhados */
   .project {
     flex-direction: column;
     text-align: center;
